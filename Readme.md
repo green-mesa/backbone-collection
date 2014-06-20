@@ -5,6 +5,11 @@
 
 ## Installation
 
+  Install with [npm(1)](http://npmjs.org):
+
+    $ component install green-mesa/backbone-collection
+
+
   Install with [component(1)](http://component.io):
 
     $ component install green-mesa/backbone-collection
