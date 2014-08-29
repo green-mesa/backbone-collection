@@ -7,7 +7,7 @@
 
   Install with [npm(1)](http://npmjs.org):
 
-    $ npm install backbone-collection
+    $ npm install --save backbone-collection
 
 
   Install with [component(1)](http://component.io):
