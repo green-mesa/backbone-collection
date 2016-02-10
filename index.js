@@ -7,7 +7,7 @@
 
 var _ = require('underscore');
 var Model = require('backbone-model').Model;
-var Events = require('backbone-events').Events;
+var Events = require('green-mesa-backbone-events').Events;
 
 var array = [];
 var push = array.push;
