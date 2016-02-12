@@ -16,6 +16,10 @@ var splice = array.splice;
 
 var wrapError = require('backbone-helpers').wrapError;
 
+var instanceOfModel = function (obj) {
+  return !!obj.cid;
+}
+
 // Backbone.Collection
 // -------------------
 
@@ -116,7 +120,7 @@ var wrapError = require('backbone-helpers').wrapError;
       // from being added.
       for (i = 0, l = models.length; i < l; i++) {
         attrs = models[i];
-        if (attrs instanceof Model) {
+        if (instanceOfModel(attrs.cid)) {
           id = model = attrs;
         } else {
           id = attrs[targetModel.prototype.idAttribute];
@@ -343,7 +347,7 @@ var wrapError = require('backbone-helpers').wrapError;
     // Prepare a hash of attributes (or other model) to be added to this
     // collection.
     _prepareModel: function(attrs, options) {
-      if (attrs instanceof Model) {
+      if (instanceOfModel(attrs)) {
         if (!attrs.collection) attrs.collection = this;
         return attrs;
       }
