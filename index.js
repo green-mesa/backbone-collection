@@ -120,7 +120,7 @@ var instanceOfModel = function (obj) {
       // from being added.
       for (i = 0, l = models.length; i < l; i++) {
         attrs = models[i];
-        if (instanceOfModel(attrs.cid)) {
+        if (instanceOfModel(attrs)) {
           id = model = attrs;
         } else {
           id = attrs[targetModel.prototype.idAttribute];
